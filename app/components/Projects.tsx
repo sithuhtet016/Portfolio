@@ -4,7 +4,7 @@ export function Projects() {
       title: "WEATHER.APP",
       description:
         "Real-time weather forecasting app with city search, live API integration, and responsive design. Built with React and OpenWeatherMap API.",
-      image: "public/images/weatherapp.png",
+      image: "/images/weatherapp.png",
       tags: ["REACT", "API", "TAILWIND"],
       status: "ONLINE",
       viewUrl: "https://sithuhtet016.github.io/WeatherApp/",
@@ -14,7 +14,7 @@ export function Projects() {
       title: "E-SHOP.EXE",
       description:
         "Modern e-commerce solution for Slay Queen brand featuring real-time inventory, seamless checkout experience, and responsive design.",
-      image: "public/images/slayqueenstore.png",
+      image: "/images/slayqueenstore.png",
       tags: ["REACT", "TAILWIND", "JSON API"],
       status: "ONLINE",
       viewUrl: "https://www.slayqueenstore.me/",
