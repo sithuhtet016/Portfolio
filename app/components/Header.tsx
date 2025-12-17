@@ -64,21 +64,24 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden pixel-corners px-2 py-1"
+            className="md:hidden h-[30px]"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}
-            style={{
-              fontFamily: "'Press Start 2P', cursive",
-              fontSize: "1.25rem",
-              color: "rgb(var(--color-primary))",
-              border: "2px solid rgb(var(--color-primary))",
-              background: "rgba(255, 0, 255, 0.1)",
-            }}>
+            aria-expanded={isMobileMenuOpen}>
             {isMobileMenuOpen ? (
-              "X"
+              <span
+                className="block w-[30px] h-[24px]"
+                style={{
+                  WebkitMask:
+                    "url('/icons/x-close-icon.svg') no-repeat center / contain",
+                  mask: "url('/icons/x-close-icon.svg') no-repeat center / contain",
+                  backgroundColor: "rgb(255, 0, 255)",
+                  display: "block",
+                }}
+                aria-hidden="true"
+              />
             ) : (
               <span
-                className="block w-5 h-[30px]"
+                className="block w-[30px] h-[30px]"
                 style={{
                   WebkitMask:
                     "url('/icons/menu.svg') no-repeat center / contain",
