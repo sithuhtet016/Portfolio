@@ -25,10 +25,11 @@ export function Header() {
         isScrolled ? "shadow-lg" : ""
       }`}
       style={{
-        background: "rgba(10, 0, 20, 0.95)",
-        borderBottom: "4px solid rgb(var(--color-primary))",
-        boxShadow: isScrolled ? "0 0 20px rgb(var(--color-primary))" : "none",
-      }}>
+        background: "rgba(0, 0, 0, 0.95)",
+        borderBottom: "4px solid rgb(var(--color-brick))",
+        boxShadow: isScrolled ? "0 0 0 4px rgb(var(--color-brick))" : "none",
+      }}
+    >
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a
@@ -38,7 +39,8 @@ export function Header() {
               fontSize: "1rem",
               color: "rgb(var(--color-primary))",
               textShadow: "0 0 10px rgb(var(--color-primary))",
-            }}>
+            }}
+          >
             &lt;DEV.SITHU&gt;
           </a>
 
@@ -54,7 +56,8 @@ export function Header() {
                     fontSize: "0.65rem",
                     color: "rgb(var(--color-secondary))",
                     textShadow: "0 0 5px rgb(var(--color-secondary))",
-                  }}>
+                  }}
+                >
                   {item.name}
                 </a>
               </li>
@@ -64,29 +67,30 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden h-[30px]"
+            className="md:hidden h-7.5"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}>
+            aria-expanded={isMobileMenuOpen}
+          >
             {isMobileMenuOpen ? (
               <span
-                className="block w-[30px] h-[24px]"
+                className="block w-7.5 h-6"
                 style={{
                   WebkitMask:
                     "url('/icons/x-close-icon.svg') no-repeat center / contain",
                   mask: "url('/icons/x-close-icon.svg') no-repeat center / contain",
-                  backgroundColor: "rgb(255, 0, 255)",
+                  backgroundColor: "rgb(var(--color-primary))",
                   display: "block",
                 }}
                 aria-hidden="true"
               />
             ) : (
               <span
-                className="block w-[30px] h-[30px]"
+                className="block w-7.5 h-7.5"
                 style={{
                   WebkitMask:
                     "url('/icons/menu.svg') no-repeat center / contain",
                   mask: "url('/icons/menu.svg') no-repeat center / contain",
-                  backgroundColor: "rgb(255, 0, 255)",
+                  backgroundColor: "rgb(var(--color-primary))",
                   display: "block",
                 }}
                 aria-hidden="true"
@@ -109,7 +113,8 @@ export function Header() {
                     fontSize: "0.65rem",
                     color: "rgb(var(--color-secondary))",
                     textShadow: "0 0 5px rgb(var(--color-secondary))",
-                  }}>
+                  }}
+                >
                   {item.name}
                 </a>
               </li>
